@@ -1,0 +1,7 @@
+CREATE TABLE Accounts (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(255) NOT NULL,
+  last_name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL,
+  address_id INT NOT NULL REFERENCES Addresses(id)
+);

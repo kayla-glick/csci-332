@@ -1,0 +1,7 @@
+CREATE TABLE Showings (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  theater_id INT NOT NULL REFERENCES Theaters(id),
+  movie_id INT NOT NULL REFERENCES Movies(id),
+  show_time TIMESTAMP NOT NULL,
+  price INT NOT NULL
+);
