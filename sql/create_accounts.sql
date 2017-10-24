@@ -3,5 +3,6 @@ CREATE TABLE Accounts (
   first_name VARCHAR(255) NOT NULL,
   last_name VARCHAR(255) NOT NULL,
   email VARCHAR(255) UNIQUE NOT NULL,
-  address_id INT NOT NULL REFERENCES Addresses(id)
+  address_id INT NOT NULL REFERENCES Addresses(id),
+  is_owner TINYINT NOT NULL
 );
