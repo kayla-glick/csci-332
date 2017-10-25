@@ -4,6 +4,5 @@ CREATE TABLE Movies (
   description TEXT,
   producer VARCHAR(255) NOT NULL,
   release_date TIMESTAMP NOT NULL,
-  run_time INT NOT NULL,
-  rating_id INT NOT NULL
+  run_time INT NOT NULL
 );
