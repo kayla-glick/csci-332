@@ -1,5 +1,5 @@
 create view TicketInformation AS
-select ticks.id as ticket_id, ticks.purchase_date, shows.show_time, shows.price, thetrs.number as theater_number, cins.name as cinema_name, concat(adds.street, ', ', adds.city, ', ', adds.state, ' ', adds.zip) as address, movs.title as movie_title, movs.genre, movs.run_time
+select ticks.id as ticket_id, ticks.account_id, ticks.purchase_date, shows.show_time, shows.price, thetrs.number as theater_number, cins.name as cinema_name, concat(adds.street, ', ', adds.city, ', ', adds.state, ' ', adds.zip) as address, movs.title as movie_title, movs.genre, movs.run_time
 from Tickets ticks
 inner join Showings shows
 on ticks.showing_id = shows.id
