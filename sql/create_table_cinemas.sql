@@ -3,4 +3,5 @@ CREATE TABLE Cinemas (
   name VARCHAR(255) NOT NULL,
   address_id INT NOT NULL REFERENCES Addresses(id),
   owner_id INT NOT NULL REFERENCES Accounts(id)
+  ON DELETE CASCADE
 );
