@@ -4,5 +4,6 @@ CREATE TABLE Showings (
   movie_id INT NOT NULL REFERENCES Movies(id),
   show_date DATE NOT NULL,
   show_time TIME NOT NULL,
-  price INT NOT NULL
+  price INT NOT NULL,
+  UNIQUE KEY (theater_id, show_date, show_time)
 );
