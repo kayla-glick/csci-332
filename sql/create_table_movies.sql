@@ -6,5 +6,5 @@ CREATE TABLE Movies (
   rating VARCHAR(5) NOT NULL,
   producer_id INT references Accounts(id),
   run_time INT NOT NULL,
-  release_date TIMESTAMP NOT NULL
+  release_date DATE NOT NULL
 );
