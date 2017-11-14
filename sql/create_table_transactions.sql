@@ -3,4 +3,4 @@ CREATE TABLE Transactions (
   account_id INT NOT NULL REFERENCES Accounts(id),
   amount INT NOT NULL,
   date TIMESTAMP NOT NULL
-)
+);
