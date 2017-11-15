@@ -4,7 +4,7 @@ FROM Tickets ticks
 INNER JOIN Transactions tracs
 ON ticks.transaction_id = tracs.id
 INNER JOIN Showings shows
-ON ticks.showing_id = shows.id
+ON tracs.showing_id = shows.id
 INNER JOIN Theaters thetrs
 ON shows.theater_id = thetrs.id
 INNER JOIN Cinemas cins
