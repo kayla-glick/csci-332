@@ -3,5 +3,3 @@ SELECT DISTINCT movs.id AS movie_id, movs.title, movs.description, movs.genre, m
 FROM Movies movs
 INNER JOIN Accounts accs
 ON accs.id = movs.producer_id
-INNER JOIN Showings shows
-ON shows.movie_id = movs.id
