@@ -1,4 +1,4 @@
 CREATE TABLE Tickets (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  transaction_id INT NOT NULL REFERENCES Transactions(id)
+  transaction_id INT NOT NULL REFERENCES Transactions(id) ON DELETE CASCADE
 );
