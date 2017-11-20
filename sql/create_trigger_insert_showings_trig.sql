@@ -1,4 +1,4 @@
-CREATE TRIGGER OverlapShowingTrig
+CREATE TRIGGER InsertShowingsTrig
 BEFORE INSERT ON Showings
 FOR EACH ROW
 BEGIN
@@ -19,5 +19,12 @@ SET overlapping = (
 );
 IF overlapping > 0 THEN
 SIGNAL sqlstate '45001' SET message_text="There is already a showing in this theater at this time.";
+END IF;
+END;;
+BEGIN
+DECLARE release_date DATE;
+SET release_date = ( SELECT release_date from Movies where id=NEW.movie_id );
+IF NEW.show_date < release_date THEN
+SIGNAL sqlstate '45001' SET message_text="Showings may only occur after a movie is released.";
 END IF;
 END;;
