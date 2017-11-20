@@ -4,7 +4,7 @@ CREATE TABLE Movies (
   description TEXT,
   genre VARCHAR(255) NOT NULL,
   rating VARCHAR(5) NOT NULL,
-  producer_id INT references Accounts(id),
+  producer_id INT REFERENCES Accounts(id) ON DELETE CASCADE,
   run_time INT NOT NULL,
   release_date DATE NOT NULL
 );
