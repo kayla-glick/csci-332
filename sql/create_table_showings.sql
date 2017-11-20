@@ -1,7 +1,7 @@
 CREATE TABLE Showings (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  theater_id INT NOT NULL REFERENCES Theaters(id),
-  movie_id INT NOT NULL REFERENCES Movies(id),
+  theater_id INT NOT NULL REFERENCES Theaters(id) ON DELETE CASCADE,
+  movie_id INT NOT NULL REFERENCES Movies(id) ON DELETE CASCADE,
   show_date DATE NOT NULL,
   show_time TIME NOT NULL,
   price INT NOT NULL
