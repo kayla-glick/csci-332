@@ -5,7 +5,7 @@ BEGIN
 DECLARE overlapping INTEGER;
 DECLARE run_time INTEGER;
 DECLARE end_time TIME;
-DECLARE release_date DATE;
+DECLARE date DATE;
 SET run_time = ( SELECT run_time FROM Movies WHERE id=NEW.movie_id );
 SET end_time = AddTime(NEW.show_time, SEC_TO_TIME(run_time * 60));
 SET overlapping = ( 
@@ -22,8 +22,8 @@ IF overlapping > 0 THEN
 SIGNAL sqlstate '45001' SET message_text="There is already a showing in this theater at this time.";
 END IF;
 
-SET release_date = ( SELECT release_date from Movies where id=NEW.movie_id );
-IF NEW.show_date < release_date THEN
+SET date = ( SELECT release_date from Movies where id=NEW.movie_id );
+IF NEW.show_date < date THEN
 SIGNAL sqlstate '45001' SET message_text="Showings may only occur after a movie is released.";
 END IF;
 END;;
