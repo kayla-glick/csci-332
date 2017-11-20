@@ -1,7 +1,7 @@
 CREATE TABLE Transactions (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  account_id INT NOT NULL REFERENCES Accounts(id),
-  showing_id INT NOT NULL REFERENCES Showings(id),
+  account_id INT NOT NULL REFERENCES Accounts(id) ON DELETE CASCADE,
+  showing_id INT NOT NULL REFERENCES Showings(id) ON DELETE CASCADE,
   ticket_count INT NOT NULL,
   amount INT NOT NULL,
   date TIMESTAMP NOT NULL
