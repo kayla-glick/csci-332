@@ -20,4 +20,4 @@ SET overlapping = (
 IF overlapping > 0 THEN
 SIGNAL sqlstate '45001' SET message_text="There is already a showing in this theater at this time.";
 END IF;
-END
+END;;
