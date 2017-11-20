@@ -3,7 +3,7 @@ CREATE TABLE Accounts (
   first_name VARCHAR(255) NOT NULL,
   last_name VARCHAR(255) NOT NULL,
   email VARCHAR(255) UNIQUE NOT NULL,
-  address_id INT NOT NULL REFERENCES Addresses(id),
+  address_id INT NOT NULL REFERENCES Addresses(id) ON DELETE CASCADE,
   is_owner TINYINT(1) NOT NULL,
   is_producer TINYINT(1) NOT NULL
 );
