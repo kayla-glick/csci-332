@@ -1,0 +1,4 @@
+[20-Nov-2017 17:06:05 CST6CDT] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home/kyleg382/public_html/theaters/create.php:6
+Stack trace:
+#0 {main}
+  thrown in /home/kyleg382/public_html/theaters/create.php on line 6

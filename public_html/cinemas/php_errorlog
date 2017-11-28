@@ -1,0 +1,6 @@
+[27-Nov-2017 10:40:01 CST6CDT] PHP Parse error:  syntax error, unexpected '$showings_sql' (T_VARIABLE) in /home/kyleg382/public_html/cinemas/report.php on line 17
+[27-Nov-2017 10:40:19 CST6CDT] PHP Parse error:  syntax error, unexpected '$showings_sql' (T_VARIABLE) in /home/kyleg382/public_html/cinemas/report.php on line 17
+[27-Nov-2017 10:40:37 CST6CDT] PHP Parse error:  syntax error, unexpected '$showings' (T_VARIABLE) in /home/kyleg382/public_html/cinemas/report.php on line 17
+[27-Nov-2017 10:42:32 CST6CDT] PHP Parse error:  syntax error, unexpected '"' in /home/kyleg382/public_html/cinemas/report.php on line 15
+[27-Nov-2017 10:50:58 CST6CDT] PHP Parse error:  syntax error, unexpected ';' in /home/kyleg382/public_html/cinemas/report.php on line 42
+[27-Nov-2017 10:59:30 CST6CDT] PHP Parse error:  syntax error, unexpected 'class' (T_CLASS) in /home/kyleg382/public_html/cinemas/show.php on line 21
